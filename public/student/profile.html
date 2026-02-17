@@ -1,0 +1,35 @@
+<!doctype html><html><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Student Profile</title><link rel="stylesheet" href="/css/style.css"/>
+</head><body>
+<div class="topbar" data-topbar>
+  <div class="brand"><div class="logo">✦</div><div>
+    <h1 data-title>Student Profile</h1><p data-sub>Set name, dept, class</p>
+  </div></div>
+  <div class="chips">
+    <span class="chip purple" data-chip>STUDENT</span>
+    <a class="btn small" href="/student/dashboard.html">Dashboard</a>
+    <button class="btn small danger" data-logout>Logout</button>
+  </div>
+</div>
+
+<div class="container">
+  <div class="card section" style="margin-top:14px;">
+    <h2 class="title">Profile</h2>
+    <p class="sub">Required to access attendance.</p>
+    <div class="grid two" style="margin-top:12px;">
+      <div class="field"><label>Name</label><input class="input" id="name"/></div>
+      <div class="field"><label>Dept Code</label><input class="input" id="dept" placeholder="CSE"/></div>
+    </div>
+    <div class="grid two" style="margin-top:10px;">
+      <div class="field"><label>Class ID</label><input class="input" id="classId" placeholder="24-char Mongo ObjectId"/></div>
+      <button class="btn primary" id="save" style="align-self:end;">Save</button>
+    </div>
+    <p class="sub" style="margin-top:12px;">
+      Tip: Ask your CR/HOD for your classId.
+    </p>
+  </div>
+</div>
+
+<script type="module" src="/js/pages/student-profile.js"></script>
+</body></html>
