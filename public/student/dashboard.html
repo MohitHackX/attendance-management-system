@@ -1,0 +1,35 @@
+<!doctype html><html><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Student Dashboard</title><link rel="stylesheet" href="/css/style.css"/>
+</head><body>
+<div class="topbar" data-topbar>
+  <div class="brand"><div class="logo">✦</div><div>
+    <h1 data-title>Student</h1><p data-sub>Attendance + Announcements</p>
+  </div></div>
+  <div class="chips">
+    <span class="chip purple" data-chip>STUDENT</span>
+    <a class="btn small" href="/student/profile.html">Profile</a>
+    <button class="btn small danger" data-logout>Logout</button>
+  </div>
+</div>
+
+<div class="container">
+  <div class="nav">
+    <a class="active" href="/student/dashboard.html">Dashboard</a>
+    <a href="/student/profile.html">Profile</a>
+  </div>
+
+  <div class="grid two" style="margin-top:14px;">
+    <div class="card section">
+      <h2 class="title">My Attendance</h2>
+      <div id="att" class="sub">Loading…</div>
+    </div>
+    <div class="card section">
+      <h2 class="title">Announcements</h2>
+      <div id="anns" class="sub">Loading…</div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="/js/pages/student-dashboard.js"></script>
+</body></html>
