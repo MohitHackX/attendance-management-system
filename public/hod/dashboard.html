@@ -1,0 +1,85 @@
+<!doctype html><html><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>HOD Dashboard</title><link rel="stylesheet" href="/css/style.css"/>
+</head><body>
+<div class="topbar" data-topbar>
+  <div class="brand"><div class="logo">✦</div><div>
+    <h1 data-title>HOD</h1><p data-sub>Manage Teachers, CR, Classes, Subjects</p>
+  </div></div>
+  <div class="chips">
+    <span class="chip purple" data-chip>HOD</span>
+    <button class="btn small danger" data-logout>Logout</button>
+  </div>
+</div>
+
+<div class="container">
+  <div class="nav">
+    <a class="active" href="/hod/dashboard.html">Dashboard</a>
+    <a href="/hod/reports.html">Reports</a>
+  </div>
+
+  <div class="grid two" style="margin-top:14px;">
+    <div class="card section">
+      <h2 class="title">Create Teacher</h2>
+      <div class="grid">
+        <div class="field"><label>Name</label><input class="input" id="t_name"/></div>
+        <div class="field"><label>Email</label><input class="input" id="t_email"/></div>
+        <div class="field"><label>Password</label><input class="input" id="t_pass" type="password"/></div>
+        <button class="btn primary" id="t_create">Create</button>
+      </div>
+    </div>
+
+    <div class="card section">
+      <h2 class="title">Create Class</h2>
+      <div class="grid two">
+        <div class="field"><label>Name</label><input class="input" id="c_name" placeholder="BCA 2-A"/></div>
+        <div class="field"><label>Semester</label><input class="input" id="c_sem" type="number" value="2"/></div>
+      </div>
+      <div class="grid two" style="margin-top:10px;">
+        <div class="field"><label>Section</label><input class="input" id="c_sec" placeholder="A"/></div>
+        <button class="btn primary" id="c_create" style="align-self:end;">Create</button>
+      </div>
+      <div id="classes" style="margin-top:12px;"></div>
+    </div>
+  </div>
+
+  <div class="grid two" style="margin-top:14px;">
+    <div class="card section">
+      <h2 class="title">Assign Teacher → Class</h2>
+      <div class="grid two">
+        <div class="field"><label>Class</label><select id="assign_class"></select></div>
+        <div class="field"><label>Teacher</label><select id="assign_teacher"></select></div>
+      </div>
+      <button class="btn primary" id="assign_btn" style="margin-top:10px;">Assign</button>
+    </div>
+
+    <div class="card section">
+      <h2 class="title">Create Subject</h2>
+      <div class="grid two">
+        <div class="field"><label>Class</label><select id="s_class"></select></div>
+        <div class="field"><label>Subject Code</label><input class="input" id="s_code" placeholder="DBMS"/></div>
+      </div>
+      <div class="grid two" style="margin-top:10px;">
+        <div class="field"><label>Subject Name</label><input class="input" id="s_name" placeholder="Database"/></div>
+        <button class="btn primary" id="s_create" style="align-self:end;">Create</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card section" style="margin-top:14px;">
+    <h2 class="title">Create CR</h2>
+    <p class="sub">CR must be tied to a class.</p>
+    <div class="grid three">
+      <div class="field"><label>Class</label><select id="cr_class"></select></div>
+      <div class="field"><label>Name</label><input class="input" id="cr_name"/></div>
+      <div class="field"><label>Email</label><input class="input" id="cr_email"/></div>
+    </div>
+    <div class="grid two" style="margin-top:10px;">
+      <div class="field"><label>Password</label><input class="input" id="cr_pass" type="password"/></div>
+      <button class="btn primary" id="cr_create" style="align-self:end;">Create CR</button>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="/js/pages/hod-dashboard.js"></script>
+</body></html>
