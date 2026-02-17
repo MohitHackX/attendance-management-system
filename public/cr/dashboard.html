@@ -1,0 +1,33 @@
+<!doctype html><html><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>CR Dashboard</title><link rel="stylesheet" href="/css/style.css"/>
+</head><body>
+<div class="topbar" data-topbar>
+  <div class="brand"><div class="logo">✦</div><div>
+    <h1 data-title>CR</h1><p data-sub>Class Summary & Announcements</p>
+  </div></div>
+  <div class="chips">
+    <span class="chip purple" data-chip>CR</span>
+    <button class="btn small danger" data-logout>Logout</button>
+  </div>
+</div>
+
+<div class="container">
+  <div class="nav">
+    <a class="active" href="/cr/dashboard.html">Dashboard</a>
+  </div>
+
+  <div class="grid two" style="margin-top:14px;">
+    <div class="card section">
+      <h2 class="title">Class Summary</h2>
+      <div id="sum" class="sub">Loading…</div>
+    </div>
+    <div class="card section">
+      <h2 class="title">Announcements</h2>
+      <div id="anns" class="sub">Loading…</div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="/js/pages/cr-dashboard.js"></script>
+</body></html>
