@@ -1,0 +1,29 @@
+<!doctype html><html><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Teacher Dashboard</title><link rel="stylesheet" href="/css/style.css"/>
+</head><body>
+<div class="topbar" data-topbar>
+  <div class="brand"><div class="logo">✦</div><div>
+    <h1 data-title>Teacher</h1><p data-sub>Classes & Attendance</p>
+  </div></div>
+  <div class="chips">
+    <span class="chip purple" data-chip>TEACHER</span>
+    <button class="btn small danger" data-logout>Logout</button>
+  </div>
+</div>
+
+<div class="container">
+  <div class="nav">
+    <a class="active" href="/teacher/dashboard.html">Dashboard</a>
+    <a href="/teacher/attendance.html">Mark Attendance</a>
+    <a href="/teacher/sheet.html">Attendance Sheet</a>
+  </div>
+
+  <div class="card section" style="margin-top:14px;">
+    <h2 class="title">My Classes</h2>
+    <div id="classes" class="sub">Loading…</div>
+  </div>
+</div>
+
+<script type="module" src="/js/pages/teacher-dashboard.js"></script>
+</body></html>

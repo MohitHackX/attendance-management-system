@@ -1,0 +1,40 @@
+<!doctype html><html><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Attendance Sheet</title><link rel="stylesheet" href="/css/style.css"/>
+</head><body>
+<div class="topbar" data-topbar>
+  <div class="brand"><div class="logo">✦</div><div>
+    <h1 data-title>Attendance Sheet</h1><p data-sub>View sessions + Export CSV</p>
+  </div></div>
+  <div class="chips">
+    <span class="chip purple" data-chip>TEACHER</span>
+    <button class="btn small danger" data-logout>Logout</button>
+  </div>
+</div>
+
+<div class="container">
+  <div class="nav">
+    <a href="/teacher/dashboard.html">Dashboard</a>
+    <a href="/teacher/attendance.html">Mark Attendance</a>
+    <a class="active" href="/teacher/sheet.html">Attendance Sheet</a>
+  </div>
+
+  <div class="card section" style="margin-top:14px;">
+    <div class="grid three">
+      <div class="field"><label>Class</label><select id="classId"></select></div>
+      <div class="field"><label>Subject</label><select id="subjectId"></select></div>
+      <button class="btn primary" id="load" style="align-self:end;">Load</button>
+    </div>
+    <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
+      <button class="btn" id="csv">Export CSV</button>
+    </div>
+  </div>
+
+  <div class="card section" style="margin-top:14px;">
+    <h2 class="title">Sessions</h2>
+    <div id="table" class="sub">Load a sheet…</div>
+  </div>
+</div>
+
+<script type="module" src="/js/pages/teacher-sheet.js"></script>
+</body></html>
