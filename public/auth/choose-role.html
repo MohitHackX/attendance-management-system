@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Choose Role</title>
+  <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+  <div class="topbar" data-topbar>
+    <div class="brand">
+      <div class="logo">✦</div>
+      <div>
+        <h1 data-title>Choose Role</h1>
+        <p data-sub>Select how you want to login</p>
+      </div>
+    </div>
+    <div class="chips">
+      <span class="chip" id="deptChip">Dept: —</span>
+      <a class="btn small ghost" href="/">← Home</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card section">
+      <h2 class="title">Login as</h2>
+      <p class="sub">Admin / Staff / Student (OTP)</p>
+      <div class="cards" style="grid-template-columns: repeat(5, minmax(0,1fr));">
+        <a class="tile" href="/auth/admin-login.html"><h3>Admin</h3><p>Email + Password</p></a>
+        <a class="tile" href="/auth/staff-login.html"><h3>HOD</h3><p>Email + Password</p></a>
+        <a class="tile" href="/auth/staff-login.html"><h3>Teacher</h3><p>Email + Password</p></a>
+        <a class="tile" href="/auth/staff-login.html"><h3>CR</h3><p>Email + Password</p></a>
+        <a class="tile" href="/auth/student-otp.html"><h3>Student</h3><p>Email OTP</p></a>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { storage } from "/js/storage.js";
+    import { ui } from "/js/ui.js";
+    const dept = storage.getDept();
+    document.querySelector("#deptChip").textContent = `Dept: ${dept || "—"}`;
+    ui.setTopbar({ title:"Choose Role", subtitle:"Admin / Staff / Student OTP", chip: dept ? `Dept ${dept}` : "No Dept" });
+  </script>
+</body>
+</html>

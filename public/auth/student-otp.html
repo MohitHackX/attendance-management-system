@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Student OTP Login</title>
+  <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+  <div class="center">
+    <div class="card" style="width:min(580px, 100%); padding:16px;">
+      <div class="brand" style="margin-bottom:10px">
+        <div class="logo">✦</div>
+        <div>
+          <h1 style="margin:0;font-size:18px;">Student OTP Login</h1>
+          <p style="margin:0;color:var(--muted);font-size:12px;">Email OTP → JWT</p>
+        </div>
+      </div>
+
+      <div class="grid two" style="padding:6px 2px;">
+        <div class="field">
+          <label>Department (selected)</label>
+          <input class="input" id="dept" disabled/>
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <input class="input" id="email" placeholder="student@college.com"/>
+        </div>
+      </div>
+
+      <div class="grid two" style="padding:6px 2px;">
+        <button class="btn primary" id="send">Send OTP</button>
+        <a class="btn" href="/auth/choose-role.html">Back</a>
+      </div>
+
+      <div class="hr"></div>
+
+      <div class="grid two" style="padding:6px 2px;">
+        <div class="field">
+          <label>Enter OTP</label>
+          <input class="input" id="otp" placeholder="6-digit OTP"/>
+        </div>
+        <button class="btn primary" id="verify" style="align-self:end;">Verify & Login</button>
+      </div>
+
+      <p class="sub" style="margin-top:12px">
+        Note: OTP expires in 5 minutes. Attempts limited.
+      </p>
+    </div>
+  </div>
+
+  <script type="module" src="/js/pages/student-otp.js"></script>
+</body>
+</html>
