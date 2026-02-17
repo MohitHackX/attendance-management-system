@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+  <div class="center">
+    <div class="card" style="width:min(520px, 100%); padding:16px;">
+      <div class="brand" style="margin-bottom:10px">
+        <div class="logo">✦</div>
+        <div>
+          <h1 style="margin:0;font-size:18px;">Admin Login</h1>
+          <p style="margin:0;color:var(--muted);font-size:12px;">Secure access with JWT</p>
+        </div>
+      </div>
+
+      <div class="grid" style="padding:6px 2px;">
+        <div class="field">
+          <label>Email</label>
+          <input class="input" id="email" placeholder="admin@demo.com"/>
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input class="input" id="password" type="password" placeholder="••••••••"/>
+        </div>
+        <button class="btn primary" id="login">Login</button>
+        <a class="btn" href="/auth/choose-role.html">Back</a>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { api } from "/js/api.js";
+    import { storage } from "/js/storage.js";
+    import { ui } from "/js/ui.js";
+
+    document.querySelector("#login").addEventListener("click", async ()=>{
+      const email = document.querySelector("#email").value.trim();
+      const password = document.querySelector("#password").value;
+      try{
+        const res = await api("/api/auth/admin/login", { method:"POST", auth:false, body:{ email, password } });
+        storage.setToken(res.token);
+        storage.setRole("admin");
+        ui.toast("Success", "Welcome Admin");
+        location.href = "/admin/dashboard.html";
+      }catch(e){
+        ui.toast("Login Failed", e.message);
+      }
+    });
+  </script>
+</body>
+</html>
