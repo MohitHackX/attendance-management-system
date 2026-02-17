@@ -1,0 +1,42 @@
+<!doctype html><html><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>HOD Reports</title><link rel="stylesheet" href="/css/style.css"/>
+</head><body>
+<div class="topbar" data-topbar>
+  <div class="brand"><div class="logo">✦</div><div>
+    <h1 data-title>HOD Reports</h1><p data-sub>Attendance stats + %</p>
+  </div></div>
+  <div class="chips">
+    <span class="chip purple" data-chip>HOD</span>
+    <button class="btn small danger" data-logout>Logout</button>
+  </div>
+</div>
+
+<div class="container">
+  <div class="nav">
+    <a href="/hod/dashboard.html">Dashboard</a>
+    <a class="active" href="/hod/reports.html">Reports</a>
+  </div>
+
+  <div class="card section" style="margin-top:14px;">
+    <div class="grid three">
+      <div class="field"><label>Class</label><select id="classId"></select></div>
+      <div class="field"><label>Subject</label><select id="subjectId"></select></div>
+      <div class="field"><label>Date From</label><input class="input" id="from" placeholder="YYYY-MM-DD"/></div>
+    </div>
+    <div class="grid three" style="margin-top:10px;">
+      <div class="field"><label>Date To</label><input class="input" id="to" placeholder="YYYY-MM-DD"/></div>
+      <button class="btn primary" id="run" style="align-self:end;">Run Report</button>
+      <button class="btn" id="csv" style="align-self:end;">Export CSV</button>
+    </div>
+  </div>
+
+  <div class="card section" style="margin-top:14px;">
+    <h2 class="title">Result</h2>
+    <div id="out" class="sub">Run a report…</div>
+    <div id="table" style="margin-top:12px;"></div>
+  </div>
+</div>
+
+<script type="module" src="/js/pages/hod-reports.js"></script>
+</body></html>
