@@ -1,0 +1,47 @@
+<!doctype html><html><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Admin Dashboard</title><link rel="stylesheet" href="/css/style.css"/>
+</head><body>
+<div class="topbar" data-topbar>
+  <div class="brand"><div class="logo">✦</div><div>
+    <h1 data-title>Admin</h1><p data-sub>Departments & HOD Management</p>
+  </div></div>
+  <div class="chips">
+    <span class="chip purple" data-chip>ADMIN</span>
+    <button class="btn small danger" data-logout>Logout</button>
+  </div>
+</div>
+
+<div class="container">
+  <div class="nav">
+    <a class="active" href="/admin/dashboard.html">Dashboard</a>
+  </div>
+
+  <div class="grid two" style="margin-top:14px;">
+    <div class="card section">
+      <h2 class="title">Create Department</h2>
+      <div class="grid two">
+        <div class="field"><label>Code</label><input class="input" id="d_code" placeholder="CSE"/></div>
+        <div class="field"><label>Name</label><input class="input" id="d_name" placeholder="Computer Science"/></div>
+      </div>
+      <button class="btn primary" id="d_create" style="margin-top:10px;">Create</button>
+      <div id="deps" style="margin-top:12px;"></div>
+    </div>
+
+    <div class="card section">
+      <h2 class="title">Create HOD</h2>
+      <p class="sub">Creates HOD login for a department.</p>
+      <div class="grid">
+        <div class="field"><label>Name</label><input class="input" id="h_name"/></div>
+        <div class="field"><label>Dept Code</label><input class="input" id="h_dept" placeholder="CSE"/></div>
+        <div class="field"><label>Email</label><input class="input" id="h_email"/></div>
+        <div class="field"><label>Password</label><input class="input" id="h_pass" type="password"/></div>
+        <button class="btn primary" id="h_create">Create HOD</button>
+      </div>
+      <div id="hods" style="margin-top:12px;"></div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="/js/pages/admin-dashboard.js"></script>
+</body></html>
